@@ -1,8 +1,8 @@
 # Put title of your app here
 
 ![Workflow result](https://github.com/hiroshi-homma-origin/compose-android-dev-challenge-week3/workflows/Check/badge.svg)
-![Kotlin version](https://img.shields.io/badge/Kotlin-1.4.30-red) ![Compose version](https://img.shields.io/badge/Compose-1.0.0--beta01-blueviolet)
-![Gradle](https://img.shields.io/badge/Gradle%20Plugin-7.0.0--alpha08-green)
+![Kotlin version](https://img.shields.io/badge/Kotlin-1.4.31-red) ![Compose version](https://img.shields.io/badge/Compose-1.0.0--beta02-blueviolet)
+![Gradle](https://img.shields.io/badge/Gradle%20Plugin-7.0.0--alpha09-green)
 
 
 ## :scroll: Description
