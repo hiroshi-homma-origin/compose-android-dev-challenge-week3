@@ -10,7 +10,7 @@ An Android countdown timer app. It uses [Jetpack Compose](https://developer.andr
 
 
 ## :bulb: Motivation and Context
-Built for [Android Dev Challenge](https://android-developers.googleblog.com/2021/03/android-dev-challenge-2.html) (`#AndroidDevChallenge`).
+Built for [Android Dev Challenge](https://android-developers.googleblog.com/2021/03/android-dev-challenge-3.html) (`#AndroidDevChallenge`).
 The UI should have been created according to the layout.
 
 ## :camera_flash: Screenshots & movie
