@@ -10,4 +10,8 @@
       the License.
       -->
     <string name="app_name">AndroidDevChallenge</string>
+    <string name="screen1">Screen1</string>
+    <string name="screen2">Screen2</string>
+    <string name="screen3">Screen3</string>
+    <string name="screen4">Screen4</string>
 </resources>

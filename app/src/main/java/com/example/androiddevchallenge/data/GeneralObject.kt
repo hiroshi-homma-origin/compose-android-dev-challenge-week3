@@ -13,12 +13,14 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.theme
+package com.example.androiddevchallenge.data
 
-import androidx.compose.ui.graphics.Color
-
-val purple200 = Color(0xFFBB86FC)
-val purple500 = Color(0xFF6200EE)
-val purple700 = Color(0xFF3700B3)
-val teal200 = Color(0xFF03DAC5)
-val teal700 = Color(0xFF018786)
+object GeneralObject {
+    val items: List<ScreenList> = listOf(
+        ScreenList.Screen1,
+        ScreenList.Screen2,
+        ScreenList.Screen3,
+        ScreenList.Screen4,
+        ScreenList.Screen5
+    )
+}
