@@ -15,30 +15,31 @@
  */
 package com.example.androiddevchallenge.ui.presentation.screen
 
-import androidx.compose.foundation.background
-import androidx.compose.foundation.layout.Box
-import androidx.compose.foundation.layout.fillMaxSize
+import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.lazy.LazyColumn
+import androidx.compose.foundation.shape.CutCornerShape
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Modifier
-import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import androidx.navigation.NavHostController
+import com.example.androiddevchallenge.ui.presentation.parts.CourseListItem
 import com.example.androiddevchallenge.ui.presentation.parts.SingleListLayout
 import com.example.androiddevchallenge.ui.presentation.parts.SingleListLayoutPreview
 
 @Composable
 fun Screen3(navController: NavHostController) {
-    Box(Modifier.fillMaxSize().background(Color.White)) {
-        LazyColumn(
-            modifier = Modifier.padding(bottom = 55.dp)
-        ) {
-            item {
-                repeat(100) {
-                    SingleListLayout(it, navController)
-                }
+    LazyColumn(
+        modifier = Modifier.padding(bottom = 55.dp)
+    ) {
+        item {
+            CourseListItem(
+                shape = CutCornerShape(topStart = 24.dp, bottomEnd = 24.dp),
+                modifier = Modifier.height(96.dp)
+            )
+            repeat(100) {
+                SingleListLayout(it, navController)
             }
         }
     }
@@ -47,14 +48,16 @@ fun Screen3(navController: NavHostController) {
 @Preview
 @Composable
 fun Screen3Preview() {
-    Box(Modifier.fillMaxSize().background(Color.White)) {
-        LazyColumn(
-            modifier = Modifier.padding(bottom = 55.dp)
-        ) {
-            item {
-                repeat(100) {
-                    SingleListLayoutPreview()
-                }
+    LazyColumn(
+        modifier = Modifier.padding(bottom = 55.dp)
+    ) {
+        item {
+            CourseListItem(
+                shape = CutCornerShape(topStart = 24.dp, bottomEnd = 24.dp),
+                modifier = Modifier.height(96.dp)
+            )
+            repeat(100) {
+                SingleListLayoutPreview()
             }
         }
     }

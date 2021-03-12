@@ -13,7 +13,7 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.presentation.common
+package com.example.androiddevchallenge.ui.presentation.common.menu
 
 import androidx.compose.foundation.background
 import androidx.compose.foundation.clickable

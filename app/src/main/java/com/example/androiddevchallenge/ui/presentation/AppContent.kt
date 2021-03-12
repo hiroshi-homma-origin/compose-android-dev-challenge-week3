@@ -24,11 +24,11 @@ import androidx.compose.material.rememberScaffoldState
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.navigation.compose.rememberNavController
-import com.example.androiddevchallenge.ui.presentation.common.DrawerContent
-import com.example.androiddevchallenge.ui.presentation.common.DrawerContentPreview
 import com.example.androiddevchallenge.ui.presentation.common.button.FAButton
 import com.example.androiddevchallenge.ui.presentation.common.menu.BottomNavMenu
 import com.example.androiddevchallenge.ui.presentation.common.menu.BottomNavMenuPreview
+import com.example.androiddevchallenge.ui.presentation.common.menu.DrawerContent
+import com.example.androiddevchallenge.ui.presentation.common.menu.DrawerContentPreview
 import com.example.androiddevchallenge.ui.presentation.common.menu.TopAppBarMenu
 import com.example.androiddevchallenge.ui.presentation.common.menu.TopAppBarMenuPreview
 

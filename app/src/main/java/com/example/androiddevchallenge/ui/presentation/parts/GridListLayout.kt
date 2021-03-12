@@ -16,6 +16,7 @@
 package com.example.androiddevchallenge.ui.presentation.parts
 
 import androidx.compose.foundation.background
+import androidx.compose.foundation.clickable
 import androidx.compose.foundation.layout.Box
 import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
@@ -48,6 +49,8 @@ fun GridListLayout(number: Int, navController: NavHostController) {
         modifier = Modifier.fillMaxWidth()
             .wrapContentHeight()
             .padding(8.dp)
+            .clickable { },
+        elevation = 4.dp
     ) {
         Column(
             modifier = Modifier.wrapContentSize()
@@ -80,6 +83,8 @@ fun GridListLayoutPreview() {
         modifier = Modifier.fillMaxWidth()
             .wrapContentHeight()
             .padding(8.dp)
+            .clickable { },
+        elevation = 4.dp
     ) {
         Column(
             modifier = Modifier.wrapContentSize()
