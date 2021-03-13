@@ -33,7 +33,7 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
-            MyTheme(darkTheme = false) {
+            MyTheme {
                 val isLightTheme = MaterialTheme.colors.isLight
                 Timber.d("check_data:$isLightTheme")
                 if (isLightTheme) {
