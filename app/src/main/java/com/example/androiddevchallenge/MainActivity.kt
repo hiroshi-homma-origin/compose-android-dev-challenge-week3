@@ -18,17 +18,29 @@ package com.example.androiddevchallenge
 import android.os.Bundle
 import androidx.activity.compose.setContent
 import androidx.appcompat.app.AppCompatActivity
+import androidx.compose.material.MaterialTheme
 import androidx.compose.runtime.Composable
+import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.graphics.toArgb
 import androidx.compose.ui.tooling.preview.Preview
 import com.example.androiddevchallenge.ui.presentation.MyAppContent
 import com.example.androiddevchallenge.ui.presentation.MyAppContentPreview1
 import com.example.androiddevchallenge.ui.theme.MyTheme
+import com.example.androiddevchallenge.ui.theme.pink100
+import timber.log.Timber
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContent {
             MyTheme(darkTheme = false) {
+                val isLightTheme = MaterialTheme.colors.isLight
+                Timber.d("check_data:$isLightTheme")
+                if (isLightTheme) {
+                    window.statusBarColor = pink100.toArgb()
+                } else {
+                    window.statusBarColor = Color.Black.toArgb()
+                }
                 MyAppContent()
             }
         }

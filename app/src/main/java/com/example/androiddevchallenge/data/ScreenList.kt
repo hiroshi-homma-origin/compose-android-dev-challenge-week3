@@ -16,17 +16,18 @@
 package com.example.androiddevchallenge.data
 
 import androidx.compose.material.icons.Icons
-import androidx.compose.material.icons.filled.Details
+import androidx.compose.material.icons.filled.AccountCircle
+import androidx.compose.material.icons.filled.FavoriteBorder
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.More
-import androidx.compose.material.icons.filled.PlaylistPlay
-import androidx.compose.material.icons.filled.Receipt
+import androidx.compose.material.icons.filled.ShoppingCart
 import androidx.compose.ui.graphics.vector.ImageVector
 
 sealed class ScreenList(val route: String, val icon: ImageVector) {
-    object Screen1 : ScreenList("Screen1", Icons.Filled.Home)
-    object Screen2 : ScreenList("Screen2", Icons.Filled.Details)
-    object Screen3 : ScreenList("Screen3", Icons.Filled.PlaylistPlay)
-    object Screen4 : ScreenList("Screen4", Icons.Filled.Receipt)
-    object Screen5 : ScreenList("Screen5", Icons.Filled.More)
+    object WelcomeScreen : ScreenList("Welcome", Icons.Filled.More)
+    object LoginScreen : ScreenList("Login", Icons.Filled.More)
+    object HomeScreen : ScreenList("Home", Icons.Filled.Home)
+    object Screen2 : ScreenList("Favorite", Icons.Filled.FavoriteBorder)
+    object Screen3 : ScreenList("Profile", Icons.Filled.AccountCircle)
+    object Screen4 : ScreenList("Cart", Icons.Filled.ShoppingCart)
 }

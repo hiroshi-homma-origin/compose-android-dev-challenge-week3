@@ -17,10 +17,11 @@ package com.example.androiddevchallenge.data
 
 object GeneralObject {
     val items: List<ScreenList> = listOf(
-        ScreenList.Screen1,
+        ScreenList.HomeScreen,
         ScreenList.Screen2,
         ScreenList.Screen3,
         ScreenList.Screen4,
-        ScreenList.Screen5
+        ScreenList.WelcomeScreen,
+        ScreenList.LoginScreen
     )
 }

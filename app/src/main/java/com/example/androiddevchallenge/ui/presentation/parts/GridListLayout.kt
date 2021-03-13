@@ -22,6 +22,7 @@ import androidx.compose.foundation.layout.Column
 import androidx.compose.foundation.layout.fillMaxWidth
 import androidx.compose.foundation.layout.height
 import androidx.compose.foundation.layout.padding
+import androidx.compose.foundation.layout.width
 import androidx.compose.foundation.layout.wrapContentHeight
 import androidx.compose.foundation.layout.wrapContentSize
 import androidx.compose.material.Card
@@ -31,43 +32,36 @@ import androidx.compose.runtime.Composable
 import androidx.compose.runtime.getValue
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Color
+import androidx.compose.ui.layout.ContentScale
 import androidx.compose.ui.text.style.TextOverflow
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
-import androidx.navigation.NavHostController
-import androidx.navigation.compose.KEY_ROUTE
-import androidx.navigation.compose.currentBackStackEntryAsState
-import com.example.androiddevchallenge.data.ScreenList
+import com.example.androiddevchallenge.data.Garden
 import dev.chrisbanes.accompanist.glide.GlideImage
 
 @Composable
-fun GridListLayout(number: Int, navController: NavHostController) {
-    val navBackStackEntry by navController.currentBackStackEntryAsState()
-    val currentRoute = navBackStackEntry?.arguments?.getString(KEY_ROUTE)
-    val index = number + 1
+fun GridListLayout(garden: Garden) {
     Card(
-        modifier = Modifier.fillMaxWidth()
+        modifier = Modifier.width(160.dp)
             .wrapContentHeight()
-            .padding(8.dp)
+            .padding(5.dp)
             .clickable { },
         elevation = 4.dp
     ) {
         Column(
             modifier = Modifier.wrapContentSize()
-                .padding(10.dp)
         ) {
             GlideImage(
-                "https://pbs.twimg.com/profile_images/874463635950551040/IhlhyWsq_400x400.jpg",
-                modifier = Modifier.fillMaxWidth(),
+                garden.imgUrl,
+                modifier = Modifier.fillMaxWidth()
+                    .height(126.dp),
                 contentDescription = null,
-                fadeIn = true
+                fadeIn = true,
+                contentScale = ContentScale.Crop
             )
             Text(
-                text = currentRoute + "_" + index,
-                style = MaterialTheme.typography.subtitle1
-            )
-            Text(
-                text = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+                modifier = Modifier.padding(10.dp),
+                text = garden.name,
                 style = MaterialTheme.typography.subtitle1,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis
@@ -88,7 +82,6 @@ fun GridListLayoutPreview() {
     ) {
         Column(
             modifier = Modifier.wrapContentSize()
-                .padding(10.dp)
         ) {
             Box(
                 modifier = Modifier.fillMaxWidth()
@@ -96,11 +89,8 @@ fun GridListLayoutPreview() {
                     .background(Color.Gray)
             )
             Text(
-                text = ScreenList.Screen1.route + "_",
-                style = MaterialTheme.typography.subtitle1
-            )
-            Text(
-                text = "XXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXXX",
+
+                text = "XXXXXXXXX",
                 style = MaterialTheme.typography.subtitle1,
                 maxLines = 2,
                 overflow = TextOverflow.Ellipsis

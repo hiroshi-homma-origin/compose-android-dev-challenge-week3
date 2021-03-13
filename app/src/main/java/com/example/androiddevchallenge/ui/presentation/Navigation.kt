@@ -23,28 +23,29 @@ import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
 import com.example.androiddevchallenge.data.GeneralObject.items
 import com.example.androiddevchallenge.data.ScreenList
-import com.example.androiddevchallenge.ui.presentation.screen.Screen1
-import com.example.androiddevchallenge.ui.presentation.screen.Screen1Preview
 import com.example.androiddevchallenge.ui.presentation.screen.Screen2
 import com.example.androiddevchallenge.ui.presentation.screen.Screen2Preview
 import com.example.androiddevchallenge.ui.presentation.screen.Screen3
 import com.example.androiddevchallenge.ui.presentation.screen.Screen3Preview
 import com.example.androiddevchallenge.ui.presentation.screen.Screen4
 import com.example.androiddevchallenge.ui.presentation.screen.Screen4Preview
-import com.example.androiddevchallenge.ui.presentation.screen.Screen5
-import com.example.androiddevchallenge.ui.presentation.screen.Screen5Preview
+import com.example.androiddevchallenge.ui.presentation.screen.light.HomeScreen
+import com.example.androiddevchallenge.ui.presentation.screen.light.HomeScreenPreview
+import com.example.androiddevchallenge.ui.presentation.screen.light.LoginScreen
+import com.example.androiddevchallenge.ui.presentation.screen.light.WelcomeScreen
 
 @Composable
 fun Navigation(navController: NavHostController) {
-    NavHost(navController, startDestination = ScreenList.Screen1.route) {
+    NavHost(navController, startDestination = ScreenList.WelcomeScreen.route) {
         items.forEach { screen ->
             composable(screen.route) {
                 when (it.arguments?.getString(KEY_ROUTE)) {
-                    ScreenList.Screen1.route -> Screen1(navController)
+                    ScreenList.WelcomeScreen.route -> WelcomeScreen(navController)
+                    ScreenList.LoginScreen.route -> LoginScreen(navController)
+                    ScreenList.HomeScreen.route -> HomeScreen(navController)
                     ScreenList.Screen2.route -> Screen2(navController)
                     ScreenList.Screen3.route -> Screen3(navController)
                     ScreenList.Screen4.route -> Screen4(navController)
-                    ScreenList.Screen5.route -> Screen5(navController)
                 }
             }
         }
@@ -54,7 +55,7 @@ fun Navigation(navController: NavHostController) {
 @Preview
 @Composable
 fun NavigationPreview1() {
-    Screen1Preview()
+    HomeScreenPreview()
 }
 
 @Preview
@@ -73,10 +74,4 @@ fun NavigationPreview3() {
 @Composable
 fun NavigationPreview4() {
     Screen4Preview()
-}
-
-@Preview
-@Composable
-fun NavigationPreview5() {
-    Screen5Preview()
 }

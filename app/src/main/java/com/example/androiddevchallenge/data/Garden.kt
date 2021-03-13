@@ -13,20 +13,10 @@
  * See the License for the specific language governing permissions and
  * limitations under the License.
  */
-package com.example.androiddevchallenge.ui.presentation.screen
+package com.example.androiddevchallenge.data
 
-import androidx.compose.foundation.ExperimentalFoundationApi
-import androidx.compose.runtime.Composable
-import androidx.compose.ui.tooling.preview.Preview
-import androidx.navigation.NavHostController
-
-@OptIn(ExperimentalFoundationApi::class)
-@Composable
-fun Screen4(navController: NavHostController) {
-}
-
-@OptIn(ExperimentalFoundationApi::class)
-@Preview
-@Composable
-fun Screen4Preview() {
-}
+data class Garden(
+    val id: Int,
+    val imgUrl: String,
+    val name: String
+)
