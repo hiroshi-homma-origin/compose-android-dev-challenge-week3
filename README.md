@@ -16,10 +16,10 @@ The UI should have been created according to the layout.
 ## :camera_flash: Screenshots & movie
 
 ### image
-<img src="/results/screenshot_1.png" width="260">&emsp;
-<img src="/results/screenshot_2.png" width="260">&emsp;
+<img src="/results/screenshot_light_1.png" width="260"> | <img src="/results/screenshot_light_2.png" width="260"> | <img src="/results/screenshot_light_3.png" width="260"> 
+<img src="/results/screenshot_dark_1.png" width="260"> | <img src="/results/screenshot_dark_2.png" width="260"> | <img src="/results/screenshot_drak_3.png" width="260"> 
 ### movie
-<img src="" width="260">&emsp;
+<img src="https://user-images.githubusercontent.com/48885423/111022019-78bf9a80-8413-11eb-8c63-4dcafac68c5d.gif" width="260"> | <img src="https://user-images.githubusercontent.com/48885423/111021997-5cbbf900-8413-11eb-90d6-f8a03f5f1121.gif" width="260">
 
 ## License
 ```
